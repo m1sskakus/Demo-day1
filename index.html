@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomasz Gajda — Front-end Developer / UI Designer</title>
+
+<!--
+  ЧТО МЕНЯТЬ, ЧТОБЫ СДЕЛАТЬ САЙТ СВОИМ:
+  1. Фото: замени файл photo.jpg рядом с index.html на своё фото (тот же размер ~ 700x900px будет смотреться лучше всего).
+     Если файла нет — вместо фото покажется серый placeholder, сайт не сломается.
+  2. Текст: весь текст лежит прямо в этом файле, ищи блоки с комментарием "ЗАМЕНИ ТЕКСТ".
+  3. Иконки навыков подтягиваются с cdn.simpleicons.org по названию — чтобы поменять,
+     просто поменяй src="https://cdn.simpleicons.org/НАЗВАНИЕ" на нужный слаг (полный список: simpleicons.org).
+  4. Портфолио: замени work-1.jpg ... work-6.jpg на свои картинки (или поменяй src на свои файлы).
+  5. Все ссылки соцсетей — ищи href="#" рядом с комментарием "ссылка на соцсеть".
+-->
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ====== HERO ====== -->
+<section class="hero" id="top">
+  <nav class="hero__nav">
+    <a href="#top" class="logo">SA</a>
+    <div class="hero__links">
+      <a href="#about">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact" class="btn btn--outline">Contact me</a>
+    </div>
+  </nav>
+
+  <div class="hero__content">
+    <div class="hero__text">
+      <p class="hero__hi">Hi, I am</p>
+      <h1 class="hero__name">Samira Alieyva</h1>
+      <p class="hero__role">Junior Front-end Developer</p>
+
+      <div class="hero__socials">
+        <a href="#" aria-label="Email" title="Email">@</a>
+        <a href="https://github.com/settings/profile" aria-label="GitHub" title="GitHub">GH</a>
+        <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+      </div>
+    </div>
+
+    <div class="hero__photo-wrap">
+      <img class="hero__photo" src="/image-Photoroom.png" alt="Portrait photo" onerror="this.remove()">
+    </div>
+  </div>
+  <div class="intro-strip">
+    <input type="checkbox" id="read-more-toggle" class="visually-hidden">
+    <div class="intro-strip__inner">
+      <h3>SAMIRA</h3>
+      <p class="intro-strip__text">
+        Я новичок в веб-разработке, но уже успела поработать над несколькими проектами и получить опыт в создании адаптивных интерфейсов. Моя цель — создавать удобные и красивые сайты, которые будут радовать пользователей.
+        <span class="intro-strip__more">
+          Я буду учится и развиваться, чтобы стать профессиональным фронтенд-разработчиком и создавать качественные веб-приложения.
+        </span>
+      </p>
+      <label for="read-more-toggle" class="read-more-link">
+        <span class="read-more-link__less">Read more</span>
+        <span class="read-more-link__more">Show less</span>
+      </label>
+    </div>
+  </div>
+</section>
+
+<!-- ====== ABOUT ====== -->
+<section class="section about" id="about">
+  <h2 class="section__title"><span>About me</span></h2>
+
+  <!-- ЗАМЕНИ ТЕКСТ -->
+  <p class="section__lead">
+    Разрабатываю интерфейсы от идеи до релиза: продумываю макет, верстаю его
+    аккуратно и слежу, чтобы сайт одинаково хорошо чувствовал себя
+    на телефоне и на большом экране.
+  </p>
+
+  <a href="#skills" class="explore-link">Explore</a>
+  <div class="divider" aria-hidden="true">⁓⁓⁓</div>
+
+  <div class="about__grid">
+    <div class="about__item">
+      <div class="about__icon" aria-hidden="true">✎</div>
+      <h3>Design</h3>
+      <p>Строю макет с нуля или дорабатываю то, что уже есть — с учётом того,
+        как сайтом будут пользоваться на деле.</p>
+    </div>
+    <div class="about__item">
+      <div class="about__icon" aria-hidden="true">&lt;/&gt;</div>
+      <h3>Development</h3>
+      <p>Перевожу дизайн в чистый, поддерживаемый код и слежу за скоростью
+        загрузки и адаптивностью.</p>
+    </div>
+    <div class="about__item">
+      <div class="about__icon" aria-hidden="true">⚙</div>
+      <h3>Maintenance</h3>
+      <p>Обновляю контент, слежу за исправностью сайта и помогаю с
+        доработками уже после запуска.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SKILLS ====== -->
+<section class="section skills" id="skills">
+  <h2 class="section__title"><span>Skills</span></h2>
+
+  <div class="skills__group">
+    <h4 class="skills__label">Using now</h4>
+    <ul class="skills__row">
+      <li><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5"><span>HTML5</span></li>
+      <li><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3"><span>CSS3</span></li>
+      <li><img src="https://cdn.simpleicons.org/sass/CC6699" alt="Sass"><span>Sass</span></li>
+      <li><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"><span>JavaScript</span></li>
+      <li><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"><span>React</span></li>
+      <li><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"><span>Git</span></li>
+      <li><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma"><span>Figma</span></li>
+    </ul>
+  </div>
+
+  <div class="skills__group">
+    <h4 class="skills__label">Learning</h4>
+    <ul class="skills__row">
+      <li><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js"><span>Node.js</span></li>
+      <li><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"><span>MySQL</span></li>
+      <li><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript"><span>TypeScript</span></li>
+    </ul>
+  </div>
+
+  <div class="skills__group">
+    <h4 class="skills__label">Other skills</h4>
+    <ul class="skills__row">
+      <li><span class="flag" aria-hidden="true">🇬🇧</span><span>English C1/C2</span></li>
+      <li><span class="flag" aria-hidden="true">🇪🇸</span><span>Spanish B1/B2</span></li>
+      <li><img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++"><span>C++</span></li>
+      <li><img src="https://cdn.simpleicons.org/c/A8B9CC" alt="C"><span>C</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ====== PORTFOLIO ====== -->
+<section class="section portfolio" id="portfolio">
+  <h2 class="section__title"><span>Portfolio</span></h2>
+
+  <!-- фильтр без JS: спрятанные radio + label, переключают видимость через CSS -->
+  <div class="filter">
+    <input type="radio" name="filter" id="filter-all" class="visually-hidden" checked>
+    <input type="radio" name="filter" id="filter-coded" class="visually-hidden">
+    <input type="radio" name="filter" id="filter-designed" class="visually-hidden">
+    <div class="filter__tabs">
+      <label for="filter-all">All</label>
+      <label for="filter-coded">Coded</label>
+      <label for="filter-designed">Designed</label>
+    </div>
+
+    <div class="portfolio__grid">
+      <figure class="portfolio__item coded">
+        <img src="/photo_2026-09-10_15-26-39.jpg" alt="Project one" onerror="this.parentElement.classList.add('img-fallback')">
+        <figcaption>Project name</figcaption>
+      </figure>
+      <figure class="portfolio__item designed">
+        <img src="/photo_2026-09-10_15-24-28.jpg" alt="Project two" onerror="this.parentElement.classList.add('img-fallback')">
+        <figcaption>Project name</figcaption>
+      </figure>
+      <figure class="portfolio__item coded">
+        <img src="/images (1).png" alt="Project three" onerror="this.parentElement.classList.add('img-fallback')">
+        <figcaption>Project name</figcaption>
+      </figure>
+      <figure class="portfolio__item designed">
+        <img src="/images (1).png" alt="Project four" onerror="this.parentElement.classList.add('img-fallback')">
+        <figcaption>Project name</figcaption>
+      </figure>
+      <figure class="portfolio__item coded">
+        <img src="/images (1).png" alt="Project five" onerror="this.parentElement.classList.add('img-fallback')">
+        <figcaption>Project name</figcaption>
+      </figure>
+      <figure class="portfolio__item designed">
+        <img src="/images (1).png" alt="Project six" onerror="this.parentElement.classList.add('img-fallback')">
+        <figcaption>Project name</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <p class="portfolio__note">And many more to come!</p>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section class="section contact" id="contact">
+  <h2 class="section__title"><span>Contact</span></h2>
+
+  <!-- ЗАМЕНИ ТЕКСТ -->
+  <p class="section__lead">
+    Есть идея для сайта или хочется что-то обсудить? Напишите пару слов —
+    отвечаю обычно в течение дня.
+  </p>
+
+  <!-- Форма статична: чтобы она реально отправляла письма, укажи action="mailto:..."
+       или подключи любой сервис форм (Formspree, Getform и т.п.) в атрибут action -->
+  <form class="contact__form" action="#" method="post">
+    <label class="field">
+      <input type="text" name="name" placeholder="Enter your name*" required>
+    </label>
+    <label class="field">
+      <input type="email" name="email" placeholder="Enter your email*" required>
+    </label>
+    <label class="field">
+      <input type="tel" name="phone" placeholder="Phone number">
+    </label>
+    <label class="field field--textarea">
+      <textarea name="message" placeholder="Your message*" required></textarea>
+    </label>
+    <button type="submit" class="btn btn--outline">Submit</button>
+  </form>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <a href="#top" class="footer__top">▲<br>Back to top</a>
+  <div class="footer__socials">
+    <a href="#" aria-label="Facebook">f</a>
+    <a href="#" aria-label="LinkedIn">in</a>
+    <a href="#" aria-label="Instagram">ig</a>
+    <a href="#" aria-label="Email">@</a>
+  </div>
+  <!-- ЗАМЕНИ ТЕКСТ -->
+  <p class="footer__copy">© 2026 Samira Alieyva. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
