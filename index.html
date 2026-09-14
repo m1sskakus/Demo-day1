@@ -3,210 +3,361 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Samira Alieyva — Junior Front-end Developer / UI Designer</title>
+<title><!-- ЗАМЕНИТЕ на своё имя --> Alieyva Samira — Frontend Developer | Портфолио</title>
+<meta name="description" content="Портфолио Frontend-разработчика: проекты, стек технологий, опыт и контакты.">
+
+<!-- Шрифты (без JS, только CSS/шрифт) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Devicon: иконки технологий через CSS-шрифт, без JS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ====== HERO ====== -->
-<section class="hero" id="top">
-  <nav class="hero__nav">
-    <a href="#top" class="logo">SA</a>
-    <div class="hero__links">
-      <a href="#about">About me</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact" class="btn btn--outline">Contact me</a>
+<!-- Скрытый чекбокс переключения темы. Должен стоять ПЕРЕД .site-wrapper — на этом строится CSS-переключение темы -->
+<input type="checkbox" id="theme-toggle" class="visually-hidden">
+
+<!-- Ссылка для доступности: переход сразу к основному контенту -->
+<a class="skip-link" href="#main">Перейти к основному содержанию</a>
+
+<div class="site-wrapper">
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="#hero" class="logo" aria-label="На главную">
+      <!-- ЗАМЕНИТЕ инициалы на свои -->
+      <span class="logo-mark">KAKTUS</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Основная навигация">
+      <ul>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#stack">Стек</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <label for="theme-toggle" class="theme-switch" aria-label="Переключить тему сайта (тёмная/светлая)">
+      <span class="theme-switch-track">
+        <span class="theme-switch-thumb" aria-hidden="true">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+        </span>
+      </span>
+    </label>
+
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+
+      <div class="hero-text">
+        <p class="eyebrow">Привет, я Алиева Самира</p>
+        <h1 class="hero-title">
+          Frontend Engineer.<br>
+          <span class="accent-text">Creating Digital Experiences.</span>
+        </h1>
+        <p class="hero-subtitle">
+          <!-- ЗАМЕНИТЕ краткое описание специализации -->
+          Создаю быстрые, доступные и визуально выразительные интерфейсы на React и TypeScript — от идеи до продакшена.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Смотреть работы</a>
+          <!-- ЗАМЕНИТЕ ссылку на файл своего резюме (положите cv.pdf рядом с index.html) -->
+          <a href="cv.pdf" class="btn btn-secondary" download>Скачать CV</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <div class="photo-glow" aria-hidden="true"></div>
+        <img src="image-Photoroom.png" alt="Алиева Самира, Frontend-разработчик" class="hero-photo-img" width="420" height="420">
+      </div>
+
     </div>
-  </nav>
+  </section>
 
-  <div class="hero__content">
-    <div class="hero__text">
-      <p class="hero__hi">Hi, I am</p>
-      <h1 class="hero__name">Samira Alieyva</h1>
-      <p class="hero__role">Junior Front-end Developer</p>
+  <!-- ===================== TECH STACK ===================== -->
+  <section id="stack" class="stack">
+    <div class="container">
+      <h2 class="section-title"><span class="section-number">01.</span> Технологический стек</h2>
+      <p class="section-lead">Инструменты, с которыми я работаю каждый день.</p>
 
-      <div class="hero__socials">
-        <a href="mailto:samirachess83@gmail.com" aria-label="Email" title="Email">@</a>
-        <a href="https://github.com/m1sskakus" aria-label="GitHub" title="GitHub">GH</a>
-        <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+      <ul class="stack-grid" role="list">
+        <li class="stack-item">
+          <i class="devicon-html5-plain colored" aria-hidden="true"></i>
+          <span>HTML5</span>
+        </li>
+        <li class="stack-item">
+          <i class="devicon-css3-plain colored" aria-hidden="true"></i>
+          <span>CSS3</span>
+        </li>
+        <li class="stack-item">
+          <i class="devicon-javascript-plain colored" aria-hidden="true"></i>
+          <span>JavaScript</span>
+        </li>
+        <li class="stack-item">
+          <i class="devicon-typescript-plain colored" aria-hidden="true"></i>
+          <span>TypeScript</span>
+        </li>
+        <li class="stack-item">
+          <i class="devicon-git-plain colored" aria-hidden="true"></i>
+          <span>Git</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title"><span class="section-number">02.</span> Проекты</h2>
+      <p class="section-lead">Несколько избранных работ. Фильтруйте по технологиям.</p>
+
+      <!-- Фильтр реализован на radio-инпутах (CSS-only), без JS -->
+      <fieldset class="filter">
+        <legend class="visually-hidden">Фильтр проектов по технологии</legend>
+
+        <input type="radio" name="project-filter" id="filter-all" class="visually-hidden" checked>
+        <label for="filter-all" class="filter-chip">Все</label>
+
+        <input type="radio" name="project-filter" id="filter-js" class="visually-hidden">
+        <label for="filter-js" class="filter-chip">Figma</label>
+
+        <input type="radio" name="project-filter" id="filter-css" class="visually-hidden">
+        <label for="filter-css" class="filter-chip">CSS</label>
+      </fieldset>
+
+      <div class="projects-grid">
+
+        <!-- Карточка проекта 1 -->
+        <article class="card cat-css cat-html">
+          <figure class="card-media">
+            <img src="photo_2026-09-10_15-26-39.jpg" alt="Превью проекта: название проекта 1" loading="lazy">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title"><!-- Название проекта 1 -->Task Manager App</h3>
+            <ul class="card-tags" aria-label="Технологии">
+              <li>CSS</li><li>HTML</li>
+            </ul>
+            <p class="card-desc">
+              <!-- Краткое описание проекта -->
+              Верстка сайта по веб-дизайну с адаптивной сеткой, анимациями и интерактивными элементами.
+            </p>
+            <div class="card-links">
+              <a href="https://github.com/m1sskakus/site-landing-1" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="#" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Демо</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка проекта 2 -->
+        <article class="card cat-js cat-css">
+          <figure class="card-media">
+            <img src="photo_2026-09-10_15-24-28.jpg" alt="Превью проекта: название проекта 2" loading="lazy">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Landing Page Constructor</h3>
+            <ul class="card-tags" aria-label="Технологии">
+              <li>Figma</li>
+            </ul>
+            <p class="card-desc">
+              Дизайн сайта портфолио.
+            </p>
+            <div class="card-links">
+              <a href="#" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="#" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Демо</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка проекта 3 -->
+        <article class="card cat-react cat-js">
+          <figure class="card-media">
+            <img src="project-3.jpg" alt="Превью проекта: название проекта 3" loading="lazy">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Нет проекта</h3>
+            <ul class="card-tags" aria-label="Технологии">
+              <li>React</li><li>JavaScript</li><li>Chart.js</li>
+            </ul>
+            <p class="card-desc">
+              Пока в разработке!
+            </p>
+            <div class="card-links">
+              <a href="#" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="#" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Демо</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка проекта 4 -->
+        <article class="card cat-ts cat-css">
+          <figure class="card-media">
+            <img src="project-4.jpg" alt="Превью проекта: название проекта 4" loading="lazy">
+          </figure>
+          <div class="card-body">
+            <h3 class="card-title">Нет проекта</h3>
+            <ul class="card-tags" aria-label="Технологии">
+              <li>TypeScript</li><li>CSS</li><li>Storybook</li>
+            </ul>
+            <p class="card-desc">
+              Пока в разработке!
+            </p>
+            <div class="card-links">
+              <a href="#" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="#" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Демо</a>
+            </div>
+          </div>
+        </article>
+
       </div>
     </div>
+  </section>
 
-    <div class="hero__photo-wrap">
-      <img class="hero__photo" src="/image-Photoroom.png" alt="Portrait photo" onerror="this.remove()">
+  <!-- ===================== ABOUT / EXPERIENCE ===================== -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title"><span class="section-number">03.</span> Обо мне и опыт</h2>
+
+      <div class="about-grid">
+
+        <div class="about-text">
+          <p>
+           Junior Frontend-разработчик с фокусом на производительность, доступность и чистую архитектуру кода.
+            Мне важно не просто «сделать как в макете», а понять задачу пользователя и предложить решение,
+            которое удобно поддерживать и масштабировать.
+          </p>
+          <h3 class="about-subtitle">Софт-скиллы</h3>
+          <ul class="skills-list">
+            <li>Коммуникация с командой и заказчиком</li>
+            <li>Код-ревью и менторинг</li>
+            <li>Умение декомпозировать сложные задачи</li>
+          </ul>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-date">2026 — настоящее время</span>
+            <h3 class="timeline-role">Frontend Developer</h3>
+            <p class="timeline-desc">Разработка и поддержка продукта на HTML/CSS/JavaScript, оптимизация производительности.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">2026</span>
+            <h3 class="timeline-role">Junior Frontend Developer, Samira</h3>
+            <p class="timeline-desc">Вёрстка и интеграция интерфейсов, участие в дизайн-системе продукта.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-date">2020 — 2021</span>
+            <h3 class="timeline-role">Обучение / стажировка</h3>
+            <p class="timeline-desc">Освоение HTML, CSS, JavaScript и основ веб-разработки.</p>
+          </li>
+        </ol>
+
+      </div>
     </div>
-  </div>
-  <div class="intro-strip">
-    <input type="checkbox" id="read-more-toggle" class="visually-hidden">
-    <div class="intro-strip__inner">
-      <h3>SAMIRA</h3>
-      <p class="intro-strip__text">
-        Я новичок в веб-разработке, но уже успела поработать над несколькими проектами и получить опыт в создании адаптивных интерфейсов. Моя цель — создавать удобные и красивые сайты, которые будут радовать пользователей.
-        <span class="intro-strip__more">
-          Я буду учится и развиваться, чтобы стать профессиональным фронтенд-разработчиком и создавать качественные веб-приложения.
-        </span>
-      </p>
-      <label for="read-more-toggle" class="read-more-link">
-        <span class="read-more-link__less">Read more</span>
-        <span class="read-more-link__more">Show less</span>
-      </label>
+  </section>
+
+  <!-- ===================== CONTACTS ===================== -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2 class="section-title"><span class="section-number">04.</span> Контакты</h2>
+      <p class="section-lead">Открыт(а) к предложениям и интересным проектам — напишите мне.</p>
+
+      <div class="contacts-grid">
+
+      
+        <form class="contact-form" action="https://formspree.io/f/ЗАМЕНИТЕ_ID" method="POST" novalidate>
+
+          <div class="form-group">
+            <label for="name">Имя <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              minlength="2"
+              autocomplete="name"
+              aria-required="true">
+            <span class="form-hint">Введите не менее 2 символов</span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              autocomplete="email"
+              aria-required="true">
+            <span class="form-hint">Например: name@example.com</span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Сообщение <span aria-hidden="true">*</span></label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              minlength="10"
+              aria-required="true"></textarea>
+            <span class="form-hint">Не менее 10 символов</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Отправить сообщение</button>
+        </form>
+
+        <div class="social-links">
+          <h3 class="about-subtitle">Или найдите меня здесь</h3>
+          <ul>
+            <li>
+              <a href="https://github.com/m1sskakus" target="_blank" rel="noopener noreferrer">
+                <i class="devicon-github-original" aria-hidden="true"></i> GitHub
+              </a>
+            </li>
+            <li>
+              
+              <a href="https://t.me/SamiraAliye" target="_blank" rel="noopener noreferrer">
+                <svg class="icon-inline" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 3.5 2.7 11c-1 .4-1 1.8.1 2.1l4.6 1.5 1.8 5.6c.2.7 1.1.9 1.6.4l2.5-2.4 4.6 3.4c.7.5 1.7.1 1.9-.7l3-16.2c.2-1-.9-1.7-1.7-1.2Z"/></svg>
+                Telegram
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="devicon-linkedin-plain" aria-hidden="true"></i> LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
     </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="container">
+    <!-- ЗАМЕНИТЕ имя и год при необходимости -->
+    <p>© 2026 Samira Aliyeva. Сделано с любовью к чистому коду.</p>
   </div>
-</section>
-
-<!-- ====== ABOUT ====== -->
-<section class="section about" id="about">
-  <h2 class="section__title"><span>About me</span></h2>
-
-  <p class="section__lead">
-    Разрабатываю интерфейсы от идеи до релиза: продумываю макет, верстаю его
-    аккуратно и слежу, чтобы сайт одинаково хорошо чувствовал себя
-    на телефоне и на большом экране.
-  </p>
-
-  <a href="#skills" class="explore-link">Explore</a>
-  <div class="divider" aria-hidden="true">⁓⁓⁓</div>
-
-  <div class="about__grid">
-    <div class="about__item">
-      <div class="about__icon" aria-hidden="true">✎</div>
-      <h3>Design</h3>
-      <p>Строю макет с нуля или дорабатываю то, что уже есть — с учётом того,
-        как сайтом будут пользоваться на деле.</p>
-    </div>
-    <div class="about__item">
-      <div class="about__icon" aria-hidden="true">&lt;/&gt;</div>
-      <h3>Development</h3>
-      <p>Перевожу дизайн в чистый, поддерживаемый код и слежу за скоростью
-        загрузки и адаптивностью.</p>
-    </div>
-    <div class="about__item">
-      <div class="about__icon" aria-hidden="true">⚙</div>
-      <h3>Maintenance</h3>
-      <p>Обновляю контент, слежу за исправностью сайта и помогаю с
-        доработками уже после запуска.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ====== SKILLS ====== -->
-<section class="section skills" id="skills">
-  <h2 class="section__title"><span>Skills</span></h2>
-
-  <div class="skills__group">
-    <h4 class="skills__label">Using now</h4>
-    <ul class="skills__row">
-      <li><img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5"><span>HTML5</span></li>
-      <li><img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS3"><span>CSS3</span></li>
-      <li><img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript"><span>JavaScript</span></li>
-      <li><img src="https://cdn.simpleicons.org/react/61DAFB" alt="React"><span>React</span></li>
-      <li><img src="https://cdn.simpleicons.org/git/F05032" alt="Git"><span>Git</span></li>
-      <li><img src="https://cdn.simpleicons.org/figma/F24E1E" alt="Figma"><span>Figma</span></li>
-    </ul>
-  </div>
-
-  <div class="skills__group">
-    <h4 class="skills__label">Learning</h4>
-    <ul class="skills__row">
-      <li><img src="https://cdn.simpleicons.org/nodedotjs/339933" alt="Node.js"><span>Node.js</span></li>
-      <li><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL"><span>MySQL</span></li>
-      <li><img src="https://cdn.simpleicons.org/typescript/3178C6" alt="TypeScript"><span>TypeScript</span></li>
-    </ul>
-  </div>
-
-  <div class="skills__group">
-    <h4 class="skills__label">Other skills</h4>
-    <ul class="skills__row">
-      <li><span class="flag" aria-hidden="true">🇬🇧</span><span>English C1/C2</span></li>
-      <li><span class="flag" aria-hidden="true">🇪🇸</span><span>Spanish B1/B2</span></li>
-      <li><img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++"><span>C++</span></li>
-      <li><img src="https://cdn.simpleicons.org/c/A8B9CC" alt="C"><span>C</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ====== PORTFOLIO ====== -->
-<section class="section portfolio" id="portfolio">
-  <h2 class="section__title"><span>Portfolio</span></h2>
-  <div class="filter">
-    <input type="radio" name="filter" id="filter-all" class="visually-hidden" checked>
-    <input type="radio" name="filter" id="filter-coded" class="visually-hidden">
-    <input type="radio" name="filter" id="filter-designed" class="visually-hidden">
-    <div class="filter__tabs">
-      <label for="filter-all">All</label>
-      <label for="filter-coded">Coded</label>
-      <label for="filter-designed">Designed</label>
-    </div>
-
-    <div class="portfolio__grid">
-      <figure class="portfolio__item coded">
-        <img src="/photo_2026-09-10_15-26-39.jpg" alt="Project one" onerror="this.parentElement.classList.add('img-fallback')">
-        <figcaption>Project name</figcaption>
-      </figure>
-      <figure class="portfolio__item designed">
-        <img src="/photo_2026-09-10_15-24-28.jpg" alt="Project two" onerror="this.parentElement.classList.add('img-fallback')">
-        <figcaption>Project name</figcaption>
-      </figure>
-      <figure class="portfolio__item coded">
-        <img src="/images (1).png" alt="Project three" onerror="this.parentElement.classList.add('img-fallback')">
-        <figcaption>Project name</figcaption>
-      </figure>
-      <figure class="portfolio__item designed">
-        <img src="/images (1).png" alt="Project four" onerror="this.parentElement.classList.add('img-fallback')">
-        <figcaption>Project name</figcaption>
-      </figure>
-      <figure class="portfolio__item coded">
-        <img src="/images (1).png" alt="Project five" onerror="this.parentElement.classList.add('img-fallback')">
-        <figcaption>Project name</figcaption>
-      </figure>
-      <figure class="portfolio__item designed">
-        <img src="/images (1).png" alt="Project six" onerror="this.parentElement.classList.add('img-fallback')">
-        <figcaption>Project name</figcaption>
-      </figure>
-    </div>
-  </div>
-
-  <p class="portfolio__note">And many more to come!</p>
-</section>
-
-<!-- ====== CONTACT ====== -->
-<section class="section contact" id="contact">
-  <h2 class="section__title"><span>Contact</span></h2>
-  <p class="section__lead">
-    Есть идея для сайта или хочется что-то обсудить? Напишите пару слов —
-    отвечаю обычно в течение дня.
-  </p>
-
-  <form class="contact__form" action="#" method="post">
-    <label class="field">
-      <input type="text" name="name" placeholder="Enter your name*" required>
-    </label>
-    <label class="field">
-      <input type="email" name="email" placeholder="Enter your email*" required>
-    </label>
-    <label class="field">
-      <input type="tel" name="phone" placeholder="Phone number">
-    </label>
-    <label class="field field--textarea">
-      <textarea name="message" placeholder="Your message*" required></textarea>
-    </label>
-    <button type="submit" class="btn btn--outline">Submit</button>
-  </form>
-</section>
-
-<!-- ====== FOOTER ====== -->
-<footer class="footer">
-  <a href="#top" class="footer__top">▲<br>Back to top</a>
-  <div class="footer__socials">
-    <a href="#" aria-label="Facebook">f</a>
-    <a href="#" aria-label="LinkedIn">in</a>
-    <a href="#" aria-label="Instagram">ig</a>
-    <a href="#" aria-label="Email">@</a>
-  </div>
-  <p class="footer__copy">© 2026 Samira Alieyva. All rights reserved.</p>
 </footer>
+
+</div><!-- /.site-wrapper -->
 
 </body>
 </html>
